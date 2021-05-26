@@ -18,15 +18,11 @@ const cart = () => {
         <ScrollView>
           <CardCart />
           <CardCart />
-
-          <CardCart />
-          <CardCart />
-          <CardCart />
-          <CardCart />
-          <CardCart />
-          <CardCart />
-
         </ScrollView>
+      </View>
+      <View style={tailwind('absolute bottom-0 w-full bg-white flex-row justify-between p-5')}>
+        <Text style={tailwind('font-semibold text-xl')}>Total</Text>
+        <Text style={tailwind('font-bold text-2xl')}>{`$${'10'}`}</Text>
       </View>
     </View>
   );
