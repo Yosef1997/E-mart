@@ -1,9 +1,10 @@
 import React from 'react';
 import {View, TouchableOpacity} from 'react-native';
-import Header from '../components/header';
-import Search from '../components/search';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import tailwind from 'tailwind-rn';
+import Header from '../components/header';
+import Search from '../components/search';
+import Menu from '../components/homeMenu'
 
 const home = () => {
   return (
@@ -37,6 +38,7 @@ const home = () => {
           />
         </TouchableOpacity>
       </Header>
+      <Menu />
     </View>
   );
 };
