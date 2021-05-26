@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable no-shadow */
 import * as React from 'react';
 import {Text, View, StyleSheet, TextInput, Button, Alert} from 'react-native';
 import {useForm, Controller} from 'react-hook-form';
@@ -26,42 +28,14 @@ export default () => {
           <TextInput
             style={styles.input}
             onBlur={onBlur}
+            placeholder="search"
             onChangeText={value => onChange(value)}
             value={value}
           />
         )}
-        name="firstName"
+        name="search"
         rules={{required: true}}
       />
-      <Text style={styles.label}>Last name</Text>
-      <Controller
-        control={control}
-        render={({field: {onChange, onBlur, value}}) => (
-          <TextInput
-            style={styles.input}
-            onBlur={onBlur}
-            onChangeText={value => onChange(value)}
-            value={value}
-          />
-        )}
-        name="lastName"
-        rules={{required: true}}
-      />
-
-      <View style={styles.button}>
-        <Button
-          style={styles.buttonInner}
-          color
-          title="Reset"
-          onPress={() => {
-            reset({
-              firstName: 'Bill',
-              lastName: 'Luo',
-            });
-          }}
-        />
-      </View>
-
       <View style={styles.button}>
         <Button
           style={styles.buttonInner}
