@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, StatusBar} from 'react-native';
+import {View} from 'react-native';
 import Search from '../components/search';
 import Header from '../components/header';
 import Ionicons from 'react-native-vector-icons/Ionicons';
@@ -7,7 +7,7 @@ import tailwind from 'tailwind-rn';
 
 const home = () => {
   return (
-    <View>
+    <View style={tailwind('bg-white flex-1')}>
       <Header style={true}>
         <View style={tailwind('w-3/4')}>
           <Search />
