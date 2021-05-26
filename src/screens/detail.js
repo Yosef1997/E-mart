@@ -32,7 +32,7 @@ const detail = () => {
         <TouchableOpacity style={tailwind('bg-gray-50 border border-gray-200 rounded-3xl w-40 p-5')}>
           <Text style={tailwind('text-center text-xl font-bold')}>Add to cart</Text>
         </TouchableOpacity>
-        <TouchableOpacity onPress={() => navigation.navigate('Cart')} style={tailwind('bg-red-300 border border-red-300 rounded-3xl w-40 p-5')}>
+        <TouchableOpacity onPress={() => navigation.navigate('Cart')} style={tailwind('bg-red-500 border border-red-500 rounded-3xl w-40 p-5')}>
           <Text style={tailwind('text-center text-xl text-white font-bold')}>Checkout</Text>
         </TouchableOpacity>
       </View>
