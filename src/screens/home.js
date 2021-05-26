@@ -5,6 +5,7 @@ import tailwind from 'tailwind-rn';
 import Header from '../components/header';
 import Search from '../components/search';
 import Menu from '../components/homeMenu'
+import CardProduct from '../components/cardProduct'
 
 const home = () => {
   return (
@@ -39,6 +40,7 @@ const home = () => {
         </TouchableOpacity>
       </Header>
       <Menu />
+      <CardProduct />
     </View>
   );
 };
