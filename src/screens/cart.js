@@ -6,8 +6,8 @@ import tailwind from 'tailwind-rn';
 
 const cart = () => {
   return (
-    <View>
-      <Header>
+    <View style={tailwind('bg-white flex-1')}>
+      <Header style={false}>
         <Text style={tailwind('font-bold text-2xl')}>Cart</Text>
         <Ionicons name="heart" size={25} color={'grey'} />
       </Header>
