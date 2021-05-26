@@ -1,5 +1,5 @@
 import React from 'react';
-import {View} from 'react-native';
+import {View, TouchableOpacity} from 'react-native';
 import Header from '../components/header';
 import Search from '../components/search';
 import Ionicons from 'react-native-vector-icons/Ionicons';
@@ -12,19 +12,30 @@ const home = () => {
         <View style={tailwind('w-3/4')}>
           <Search />
         </View>
-        <Ionicons
-          name="heart"
-          size={25}
-          color={'grey'}
-          style={tailwind('ml-2')}
-        />
-        <Ionicons name="mail" size={25} color="gray" style={tailwind('ml-2')} />
-        <Ionicons
-          name="ios-notifications"
-          size={25}
-          color="gray"
-          style={tailwind('ml-2')}
-        />
+        <TouchableOpacity>
+          <Ionicons
+            name="heart"
+            size={25}
+            color={'grey'}
+            style={tailwind('ml-2')}
+          />
+        </TouchableOpacity>
+        <TouchableOpacity>
+          <Ionicons
+            name="mail"
+            size={25}
+            color="gray"
+            style={tailwind('ml-2')}
+          />
+        </TouchableOpacity>
+        <TouchableOpacity>
+          <Ionicons
+            name="ios-notifications"
+            size={25}
+            color="gray"
+            style={tailwind('ml-2')}
+          />
+        </TouchableOpacity>
       </Header>
     </View>
   );

@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text} from 'react-native';
+import {View, Text, TouchableOpacity} from 'react-native';
 import Header from '../components/header';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import tailwind from 'tailwind-rn';
@@ -11,13 +11,22 @@ const profile = () => {
         <View style={tailwind('w-3/4')}>
           <Text style={tailwind('font-bold text-2xl')}>Profile</Text>
         </View>
-        <Ionicons name="mail" size={25} color="gray" style={tailwind('ml-2')} />
-        <Ionicons
-          name="ios-notifications"
-          size={25}
-          color="gray"
-          style={tailwind('ml-2')}
-        />
+        <TouchableOpacity>
+          <Ionicons
+            name="mail"
+            size={25}
+            color="gray"
+            style={tailwind('ml-2')}
+          />
+        </TouchableOpacity>
+        <TouchableOpacity>
+          <Ionicons
+            name="ios-notifications"
+            size={25}
+            color="gray"
+            style={tailwind('ml-2')}
+          />
+        </TouchableOpacity>
       </Header>
     </View>
   );
