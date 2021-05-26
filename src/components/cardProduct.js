@@ -9,7 +9,7 @@ export default function cardProduct(props) {
   const navigation = useNavigation()
   return (
     <View>
-      <TouchableOpacity onPress={()=>navigation.navigate('Detail')} style={tailwind('h-72 w-40 border border-gray-200 rounded-2xl p-2 mt-10')}>
+      <TouchableOpacity onPress={()=>navigation.navigate('Detail')} style={tailwind('h-72 w-40 border bg-white border-gray-200 rounded-2xl p-2 mt-10')}>
         <Image source={Logo} style={{resizeMode:'contain', height:'75%', width:'100%'}} />
         <Text style={tailwind('text-xl font-semibold my-1')}>Nike</Text>
         <View style={tailwind('flex-row justify-between items-center')}>
