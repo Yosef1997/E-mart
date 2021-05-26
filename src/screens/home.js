@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, TouchableOpacity} from 'react-native';
+import { View, TouchableOpacity, ScrollView } from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import tailwind from 'tailwind-rn';
 import Header from '../components/header';
@@ -40,7 +40,13 @@ const home = () => {
         </TouchableOpacity>
       </Header>
       <Menu />
-      <CardProduct />
+      <ScrollView>
+        <View style={{ flexDirection: 'row', justifyContent: 'space-between', flexWrap: 'wrap', paddingHorizontal: 20 }}>
+          <CardProduct />
+          <CardProduct />
+          <CardProduct />
+        </View>
+      </ScrollView>
     </View>
   );
 };

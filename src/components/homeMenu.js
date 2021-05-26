@@ -7,7 +7,7 @@ export default function homeMenu() {
   const [icon, setIcon] = useState([{ label: 'grid', name:'Category' }, { label: 'ios-pricetags', name:'Sales' }, { label: 'ios-sync-circle', name:'Top up' }, { label: 'ios-gift', name:'Offers' }])
   console.log(icon)
   return (
-    <View style={tailwind('flex-row item justify-around')}>
+    <View style={tailwind('flex-row justify-around')}>
       {icon.map(items => {
         return (
           <TouchableOpacity key={items.name}>
