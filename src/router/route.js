@@ -3,7 +3,7 @@ import {createStackNavigator} from '@react-navigation/stack';
 import SplashScreen from 'react-native-splash-screen';
 import buttonTab from './buttonTab';
 import Detail from '../screens/detail';
-import Order from '../screens/order';
+import Delivery from '../screens/delivery';
 import Search from '../screens/search';
 
 const Stack = createStackNavigator();
@@ -17,7 +17,7 @@ export default class route extends Component {
   render() {
     return (
       <Stack.Navigator>
-        {/* <Stack.Screen
+        <Stack.Screen
           component={buttonTab}
           options={{headerShown: false}}
           name="buttonTab"
@@ -28,10 +28,10 @@ export default class route extends Component {
           name="Detail"
         />
         <Stack.Screen
-          component={Order}
+          component={Delivery}
           options={{headerShown: false}}
-          name="Order"
-        /> */}
+          name="Delivery"
+        />
         <Stack.Screen
           component={Search}
           options={{headerShown: false}}
