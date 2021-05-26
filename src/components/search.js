@@ -3,7 +3,6 @@
 import * as React from 'react';
 import {Text, View, StyleSheet, TextInput, Button, Alert} from 'react-native';
 import {useForm, Controller} from 'react-hook-form';
-import Constants from 'expo-constants';
 
 export default () => {
   const {register, setValue, handleSubmit, control, reset, errors} = useForm();
@@ -64,7 +63,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: 'center',
-    paddingTop: Constants.statusBarHeight,
     padding: 8,
     backgroundColor: '#0e101c',
   },
