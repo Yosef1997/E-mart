@@ -12,7 +12,7 @@ export default function homeMenu() {
         return (
           <TouchableOpacity key={items.name}>
             <Ionicons name={items.label} size={30} style={tailwind('bg-red-50 rounded-3xl p-5 mt-7')} />
-            <Text style={tailwind('text-center mt-1')}>{items.name}</Text>
+            <Text style={tailwind('text-center font-semibold mt-1')}>{items.name}</Text>
           </TouchableOpacity>
         )
       })}
