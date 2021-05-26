@@ -2,12 +2,14 @@ import React from 'react'
 import { View, Text, Image, TouchableOpacity } from 'react-native'
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import tailwind from 'tailwind-rn';
+import {useNavigation} from '@react-navigation/core';
 import Logo from '../assets/icon.png'
 
 export default function cardCart(props) {
+  const navigation = useNavigation()
   return (
     <View>
-      <TouchableOpacity style={tailwind('flex-row justify-between border border-gray-200 rounded-3xl w-full p-5 mt-5')}>
+      <TouchableOpacity onPress={()=>navigation.navigate('Detail')} style={tailwind('flex-row justify-between border border-gray-200 rounded-3xl w-full p-5 mt-5')}>
         <Image source={Logo} style={{ resizeMode: 'contain', height: '100%', width: '15%' }} />
         <View style={tailwind('w-1/2')}>
           <Text style={tailwind('text-xl mb-4')}>Name</Text>
