@@ -11,12 +11,12 @@ export default function search() {
   const onSubmit = data => console.log(data);
 
   return (
-    <View style={tailwind('flex-row items-center bg-white rounded-2xl px-2')}>
+    <View style={tailwind('flex-row items-center bg-gray-50 rounded-2xl px-2')}>
       <Controller
         control={control}
         render={({field: {onChange, onBlur, value}}) => (
           <TextInput
-            style={tailwind('h-10 flex-1 bg-white')}
+            style={tailwind('h-10 flex-1 bg-gray-50')}
             onBlur={onBlur}
             placeholder="search"
             onChangeText={value => onChange(value)}

@@ -17,11 +17,11 @@ export default class route extends Component {
   render() {
     return (
       <Stack.Navigator>
-        <Stack.Screen
+        {/* <Stack.Screen
           component={buttonTab}
           options={{headerShown: false}}
           name="buttonTab"
-        />
+        /> */}
         <Stack.Screen
           component={Detail}
           options={{headerShown: false}}
