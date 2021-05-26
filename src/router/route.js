@@ -21,7 +21,7 @@ export default class route extends Component {
           component={buttonTab}
           options={{headerShown: false}}
           name="buttonTab"
-        /> */}
+        />
         <Stack.Screen
           component={Detail}
           options={{headerShown: false}}
@@ -31,7 +31,7 @@ export default class route extends Component {
           component={Order}
           options={{headerShown: false}}
           name="Order"
-        />
+        /> */}
         <Stack.Screen
           component={Search}
           options={{headerShown: false}}
