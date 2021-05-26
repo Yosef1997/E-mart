@@ -1,7 +1,7 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 /* eslint-disable no-shadow */
 import React from 'react';
-import {View, TextInput} from 'react-native';
+import {View, TextInput, TouchableOpacity} from 'react-native';
 import {useForm, Controller} from 'react-hook-form';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import tailwind from 'tailwind-rn';
@@ -26,9 +26,9 @@ export default function search() {
         name="search"
         defaultValue=""
       />
-      <View onPress={handleSubmit(onSubmit)}>
+      <TouchableOpacity onPress={handleSubmit(onSubmit)}>
         <Ionicons name="search-outline" size={25} color="gray" />
-      </View>
+      </TouchableOpacity>
     </View>
   );
 }
