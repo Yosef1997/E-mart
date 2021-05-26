@@ -8,7 +8,7 @@ export default function header(props) {
       style={
         props.style === true
           ? tailwind('flex bg-red-400 p-5')
-          : tailwind('flex bg-white border-b border-gray-100 p-5')
+          : tailwind('flex bg-white border-b border-gray-200 p-5')
       }>
       {props.children}
     </View>
