@@ -9,7 +9,7 @@ export default function header(props) {
         props.style === true
           ? tailwind('flex-row bg-red-300 justify-evenly items-center p-4')
           : tailwind(
-              'flex-row bg-white justify-between items-center border-b border-gray-100 p-4',
+              'flex-row bg-white justify-between items-center border-b border-gray-200 p-4',
             )
       }>
       <StatusBar
