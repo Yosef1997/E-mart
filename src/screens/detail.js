@@ -19,7 +19,7 @@ const detail = () => {
           <Ionicons name="share-social" size={25} color={'grey'} />
         </TouchableOpacity>
         <TouchableOpacity>
-          <Ionicons name="cart-outline" size={25} color={'grey'} />
+          <Ionicons name="ios-cart" size={25} color={'grey'} />
         </TouchableOpacity>
       </Header>
     </View>

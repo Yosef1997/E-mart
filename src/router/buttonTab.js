@@ -29,7 +29,7 @@ export default class buttonTab extends Component {
           component={Cart}
           options={{
             tabBarIcon: ({size, color}) => (
-              <Ionicons name="cart-outline" size={size} color={color} />
+              <Ionicons name="ios-cart" size={size} color={color} />
             ),
             tabBarBadge: 3,
           }}
