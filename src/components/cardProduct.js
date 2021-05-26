@@ -7,7 +7,7 @@ import Logo from '../assets/icon.png'
 export default function cardProduct(props) {
   return (
     <View>
-      <TouchableOpacity style={tailwind('h-72 w-40 border border-gray-200 rounded-2xl p-2 mt-10')}>
+      <TouchableOpacity style={tailwind('h-72 w-40 bg-white border border-gray-200 rounded-2xl p-2 mt-10')}>
         <Image source={Logo} style={{resizeMode:'contain', height:'75%', width:'100%'}} />
         <Text style={tailwind('text-xl font-semibold my-1')}>Nike</Text>
         <View style={tailwind('flex-row justify-between items-center')}>

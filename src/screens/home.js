@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, TouchableOpacity, ScrollView } from 'react-native';
+import { View, Text, TouchableOpacity, ScrollView } from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import tailwind from 'tailwind-rn';
 import Header from '../components/header';
@@ -9,7 +9,7 @@ import CardProduct from '../components/cardProduct'
 
 const home = () => {
   return (
-    <View style={tailwind('bg-white flex-1')}>
+    <ScrollView style={tailwind('bg-white flex-1')}>
       <Header style={true}>
         <View style={tailwind('w-3/4')}>
           <Search />
@@ -40,14 +40,15 @@ const home = () => {
         </TouchableOpacity>
       </Header>
       <Menu />
-      <ScrollView>
-        <View style={{ flexDirection: 'row', justifyContent: 'space-between', flexWrap: 'wrap', paddingHorizontal: 20 }}>
-          <CardProduct />
-          <CardProduct />
-          <CardProduct />
-        </View>
-      </ScrollView>
-    </View>
+      <View style={(tailwind('bg-gray-50 mt-10 py-10 rounded-3xl'))}>
+        <Text style={tailwind('text-3xl font-bold mx-5')}>New Arrivals</Text>
+          <View style={{ flexDirection: 'row', justifyContent: 'space-between', flexWrap: 'wrap', paddingHorizontal: 20 }}>
+            <CardProduct />
+            <CardProduct />
+            <CardProduct />
+          </View>
+      </View>
+    </ScrollView>
   );
 };
 
