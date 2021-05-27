@@ -1,14 +1,19 @@
 import create from 'zustand';
-import {devtools, persist} from 'zustand/middleware';
+import {persist} from 'zustand/middleware';
 
 let handleCart = set => ({
   cart: {},
   addCart: (item) => set((state) => ({cart: {...state.cart, ...item}})),
 });
 
-handleCart = devtools(handleCart);
+let handleUser = set => ({
+  user: null,
+  addUser: (user) => set((state) => ({user: {...state.user, ...user}})),
+});
+
 handleCart = persist(handleCart);
+handleUser = persist(handleUser)
 
-const useStore = create(handleCart);
+export const useCart = create(handleCart);
+export const useUser = create(handleUser)
 
-export default useStore;

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { View, Text, TouchableOpacity, ScrollView, FlatList } from 'react-native';
 import { useQuery } from 'react-query'
+import {useNavigation} from '@react-navigation/core';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import tailwind from 'tailwind-rn';
 import Header from '../components/header';
@@ -18,6 +19,7 @@ const fetchDetail = async (key,id) => {
 }
 
 const home = () => {
+  const navigation = useNavigation()
   const { data } = useQuery('product', fetchProduct)
   const [id, setId] = useState(1)
   const { product} = useQuery(['detail', id], fetchDetail)
@@ -69,7 +71,7 @@ const home = () => {
                     source={{ uri: item.image }}
                     title={item.title}
                     price={item.price}
-                    onPress={() => setId(item.id)}
+                    onPress={() => navigation.navigate('Detail')}
                   />
                 )
               })}

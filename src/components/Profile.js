@@ -3,11 +3,17 @@ import { View, Text, Image, ScrollView, TouchableOpacity, TextInput } from 'reac
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import { useForm, Controller } from 'react-hook-form';
 import tailwind from 'tailwind-rn';
+import {useUser} from '../zustand/store'
 import Default from '../assets/profile.png'
 
 export default function Profile() {
   const { control, handleSubmit } = useForm();
-  const onSubmit = data => console.log(data);
+  const addUser = useUser ((state)=>state.addUser)
+  const user = useUser ((state)=>state.user)
+
+  const onSubmit = (data) => {
+    addUser(data)
+  };
   return (
     <ScrollView style={tailwind('px-5')}>
       <View style={tailwind('flex-row items-center border border-gray-200 rounded-3xl w-full p-5 mt-5')}>
@@ -15,7 +21,7 @@ export default function Profile() {
           <Image source={Default} style={{ resizeMode: 'contain', height: 50, width: 50 }} />
         </TouchableOpacity>
         <View>
-          <Text style={tailwind('text-xl mb-1')}>Name</Text>
+          <Text style={tailwind('text-xl mb-1')}>{user !== null ? user.fullName: 'Name'}</Text>
           <Text style={tailwind('text-xl')}>Member Gold</Text>
         </View>
       </View>
