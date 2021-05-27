@@ -1,13 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { View, Text, ScrollView, TouchableOpacity, TextInput } from 'react-native';
 import { useNavigation } from '@react-navigation/core';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import tailwind from 'tailwind-rn';
 import { useForm, Controller } from 'react-hook-form';
 import CardCart from '../components/cardCart'
+import DropDown from '../components/dropdown'
 
 const order = () => {
   const navigation = useNavigation();
+
+  const [courier, setCourier] =useState([{label:'JNE', id:'1'},{label:'J&T', id:'2'}])
+
   const { control, handleSubmit, formState: { errors } } = useForm();
   const onSubmit = data => console.log(data);
 
@@ -128,7 +132,9 @@ const order = () => {
           </TouchableOpacity>
         </View>
       </View>
-
+      
+      <Text style={tailwind('text-lg font-semibold mt-5 mb-2')}>Courier</Text>
+      <DropDown label='Choose courier' data={courier} />
         <View style={tailwind('border border-gray-200 rounded-3xl mt-8 p-5')}>
           <View style={tailwind('flex-row justify-between')}>
             <Text style={tailwind('font-semibold text-lg text-gray-400')}>Quantity</Text>
