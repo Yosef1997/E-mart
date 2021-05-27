@@ -135,16 +135,6 @@ const order = () => {
       
       <Text style={tailwind('text-lg font-semibold mt-5 mb-2')}>Courier</Text>
       <DropDown label='Choose courier' data={courier} />
-        <View style={tailwind('border border-gray-200 rounded-3xl mt-8 p-5')}>
-          <View style={tailwind('flex-row justify-between')}>
-            <Text style={tailwind('font-semibold text-lg text-gray-400')}>Quantity</Text>
-            <Text style={tailwind('font-semibold text-xl')}>{1}</Text>
-          </View>
-          <View style={tailwind('flex-row justify-between mt-3')}>
-            <Text style={tailwind('font-semibold text-lg text-gray-400')}>Total</Text>
-            <Text style={tailwind('font-bold text-2xl ')}>{`$${'10'}`}</Text>
-          </View>
-        </View>
       </ScrollView>
       <View style={tailwind('relative bottom-0 bg-white w-full p-5')}>
         <TouchableOpacity onPress={()=>navigation.navigate('Payment')} style={tailwind('rounded-3xl bg-red-500 p-3')}>
