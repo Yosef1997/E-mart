@@ -3,7 +3,7 @@ import {devtools, persist} from 'zustand/middleware';
 
 let handleCart = set => ({
   cart: {},
-  addCart: item => set(state => ({cart: {...state.cart, ...item}})),
+  addCart: (item) => set((state) => ({cart: {...state.cart, ...item}})),
 });
 
 handleCart = devtools(handleCart);
