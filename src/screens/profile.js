@@ -1,8 +1,9 @@
 import React from 'react';
 import {View, Text, TouchableOpacity} from 'react-native';
-import Header from '../components/header';
-import Ionicons from 'react-native-vector-icons/Ionicons';
 import tailwind from 'tailwind-rn';
+import Ionicons from 'react-native-vector-icons/Ionicons';
+import Header from '../components/header';
+import ProfileBody from '../components/Profile'
 
 const profile = () => {
   return (
@@ -28,6 +29,7 @@ const profile = () => {
           />
         </TouchableOpacity>
       </Header>
+      <ProfileBody />
     </View>
   );
 };
