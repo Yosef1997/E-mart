@@ -13,17 +13,17 @@ const fetchProduct = async () => {
   const res = await fetch('https://fakestoreapi.com/products?limit=8')
   return res.json()
 }
-const fetchDetail = async (key,id) => {
-  const res = await fetch(`https://fakestoreapi.com/products/${id}`)
-  return res.json()
-}
+// const fetchDetail = async (key,id) => {
+//   const res = await fetch(`https://fakestoreapi.com/products/${id}`)
+//   return res.json()
+// }
 
 const home = () => {
   const navigation = useNavigation()
-  const { data } = useQuery('product', fetchProduct)
-  const [id, setId] = useState(1)
-  const { product} = useQuery(['detail', id], fetchDetail)
-  console.log(data)
+  const { data } = useQuery('product', fetchProduct, {staleTime : 5000})
+  const [id, setId] = useState(0)
+  const fetchDetail = (id) => fetch(`https://fakestoreapi.com/products/${id}`).then((res) => res.json())
+  const { product} = useQuery(['detail', id],() => fetchDetail(id) )
   console.log(product)
   console.log(id)
 
@@ -71,7 +71,7 @@ const home = () => {
                     source={{ uri: item.image }}
                     title={item.title}
                     price={item.price}
-                    onPress={() => navigation.navigate('Detail')}
+                    onPress={() => setId(item.id)}
                   />
                 )
               })}
